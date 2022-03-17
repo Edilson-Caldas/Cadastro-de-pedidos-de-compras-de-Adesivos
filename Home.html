@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="Main.js"></script>
+  </script>
+  <title>Cadastro de Compras adesivos</title>
+</head>
+<body>
+    <div class="wrapper">
+      <div class="cabeca">
+          <H1>Formulário para compra <br> de Pacote de adesivos </br></H1>
+          <img src="img/CaixaLogo.png" alt="logo">
+      </div>
+      <div class="corpo">
+        <form action="https://pagseguro.uol.com.br/checkout/v2/donation.html" method="post" onsubmit="return isChecked();" target="_blank">
+        <ul><img src="img/Vue.png" alt="Adesivo Vue"><input type="checkbox" name="adesivo"id=Vue > Vue
+        <img src="img/React.png" alt="Adesivo React"><input type="checkbox" name="adesivo" id="React">React
+        <img src="img/Angula.png" alt="Adeivo Angular"><input type="checkbox" name="adesivo" id="Angular">Angular</ul>
+        <ul><img src="img/PHP.png" alt="Adesivo Php"><input type="checkbox" name="adesivo" id="Php">Php
+        <img src="img/JS.png" alt="Adeivo JavaScript"><input type="checkbox" name="adesivo" id="JavaScript">JavaScript
+        <img src="img/NodeJS.png" alt="Adeivo Nodejs"><input type="checkbox" name="adesivo" id="NodeJS">Nodejs</ul>
+        <div class="fim">
+          <Label id="Qtd"><b>Quantos adesivos de cada?</b></Label> <input style="width: 6ch" class="form-control rounded-0" type="number" name="quantidade" onchange="preencheTotalProduto()" min="1" max="5" required>
+          <p><b>Observações:</b></p>
+          <textarea name="menssagem" id="menssagem" cols="30" rows="10" placeholder="   
+          Dúvidas, Recados ou Elogios"></textarea>
+          <input type="hidden" name="currency" value="BRL" />
+          <input type="hidden" name="receiverEmail" value="edgameroficial@gmail.com" />
+          <input type="hidden" name="iot" value="button" />
+          <input type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/doacoes/209x48-doar-assina.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
+        </div>
+      </div>    
+    </div>
+  </form>
+  
+</body>
+</html>
